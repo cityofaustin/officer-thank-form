@@ -135,7 +135,7 @@ class Introduction extends React.Component {
             We are the Office of Police Oversight, impartial and separate from
             the Austin Police Department.
           </p>
-          <a href="">Learn more about who we are and what we do.</a>
+          <a href="https://alpha.austin.gov/police-oversight">Learn more about who we are and what we do.</a>
         </div>
       </div>
     );
