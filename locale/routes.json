@@ -1,11 +1,11 @@
 {
   "deployment_path": {
-    "es": "policia-queja"
+    "es": "policia-agradezca"
   },
 
   "routes":  {
-    "%/police-complain/%": {
-      "es": "%/policia-queja/%"
+    "%/police-thank/%": {
+        "es": "%/policia-agradezca/%"
     },
 
     "%introduction%": {
