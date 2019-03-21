@@ -1,11 +1,11 @@
 {
   "deployment_path": {
-    "es": "policia-agradezca"
+    "es": "policia-queja"
   },
 
   "routes":  {
-    "%/police-thank/%": {
-        "es": "%/policia-agradezca/%"
+    "%/police-complain/%": {
+      "es": "%/policia-queja/%"
     },
 
     "%introduction%": {
@@ -38,6 +38,10 @@
 
     "%review-and-submit%": {
       "es": "%revisar-y-enviar%"
+    },
+
+    "%opo_current_language_english%": {
+      "es": "%opo_current_language_spanish%"
     }
   }
 }
