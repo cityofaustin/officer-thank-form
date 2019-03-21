@@ -60,8 +60,8 @@ class App extends React.Component {
     for (let formValue in formData) {
       let formItemValue = formData[formValue];
       if (
-        formItemValue === undefined ||
-        (typeof formItemValue === 'object' && !this.hasFormData(formItemValue))
+          formItemValue === undefined ||
+          (typeof formItemValue === 'object' && !this.hasFormData(formItemValue))
       ) {
         hasData = false;
       }
@@ -75,17 +75,17 @@ class App extends React.Component {
 
   // Shows the modal message
   showModal(
-    linkRedirect,
-    title,
-    message,
-    calltoaction,
-    buttonCancel,
-    buttonProceed,
+      linkRedirect,
+      title,
+      message,
+      calltoaction,
+      buttonCancel,
+      buttonProceed,
   ) {
     // If the language is the same, then ignore the click...
     if (
-      linkRedirect == '/police-complain/' &&
-      this.currentFormLanguage == 'opo_current_language_english'
+        (linkRedirect + '/') == '/police-complain/' &&
+        this.currentFormLanguage == 'opo_current_language_english'
     ) {
       console.log('Click ignored, same language');
       return;
@@ -120,64 +120,64 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <header className="schemaform-block-header site-header" role="banner">
-          <div className="usa-nav-container form-nav">
-            <nav className="language-nav">
-              <a
-                href="#"
-                className="active language"
-                onClick={() =>
-                  this.showModal(
-                    '/police-complain/',
-                    'Start over in English?',
-                    'Switching to English will erase all the information you have previously entered.',
-                    'Are you sure you want to switch?',
-                    'No, proceed in Spanish.',
-                    'Yes, start over in English.',
-                  )
-                }
-              >
-                English
-              </a>
-              <a
-                href="#"
-                className="second"
-                onClick={() =>
-                  this.showModal(
-                    '/policia-queja/',
-                    'Comenzar de nuevo en Español?',
-                    'Al cambiar a Español todos los datos que haya escrito se perderán.',
-                    'Desea cambiar el idioma?',
-                    'No, proceder en Inglés.',
-                    'Sí, comenzar en Español.',
-                  )
-                }
-              >
-                Español
-              </a>
-            </nav>
-            <nav className="site-nav">City of Austin</nav>
-          </div>
-        </header>
-        <Provider store={store}>
-          <Router history={browserHistory}>{route}</Router>
-        </Provider>
+        <div>
+          <header className="schemaform-block-header site-header" role="banner">
+            <div className="usa-nav-container form-nav">
+              <nav className="language-nav">
+                <a
+                    href="#"
+                    className="active language"
+                    onClick={() =>
+                        this.showModal(
+                            '/police-thank',
+                            'Start over in English?',
+                            'Switching to English will erase all the information you have previously entered.',
+                            'Are you sure you want to switch?',
+                            'No, proceed in Spanish.',
+                            'Yes, start over in English.',
+                        )
+                    }
+                >
+                  English
+                </a>
+                <a
+                    href="#"
+                    className="second"
+                    onClick={() =>
+                        this.showModal(
+                            '/policia-agradezca',
+                            'Comenzar de nuevo en Español?',
+                            'Al cambiar a Español todos los datos que haya escrito se perderán.',
+                            'Desea cambiar el idioma?',
+                            'No, proceder en Inglés.',
+                            'Sí, comenzar en Español.',
+                        )
+                    }
+                >
+                  Español
+                </a>
+              </nav>
+              <nav className="site-nav">City of Austin</nav>
+            </div>
+          </header>
+          <Provider store={store}>
+            <Router history={browserHistory}>{route}</Router>
+          </Provider>
 
-        {this.state.modalVisible ? (
-          <Modalbox
-            link={this.state.link}
-            title={this.state.title}
-            message={this.state.message}
-            calltoaction={this.state.calltoaction}
-            buttonCancel={this.state.buttonCancel}
-            buttonProceed={this.state.buttonProceed}
-            hideModal={this.hideModal}
-          />
-        ) : (
-          ''
-        )}
-      </div>
+          {this.state.modalVisible ? (
+              <Modalbox
+                  link={this.state.link}
+                  title={this.state.title}
+                  message={this.state.message}
+                  calltoaction={this.state.calltoaction}
+                  buttonCancel={this.state.buttonCancel}
+                  buttonProceed={this.state.buttonProceed}
+                  hideModal={this.hideModal}
+              />
+          ) : (
+              ''
+          )}
+        </div>
     );
   }
 }
