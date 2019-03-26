@@ -36,7 +36,7 @@ class Introduction extends React.Component {
             <li>
               <button
                 className="usa-accordion-button"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="b-a1"
               >
                 Online
@@ -49,11 +49,11 @@ class Introduction extends React.Component {
                 <h4>Required information</h4>
                 <ul className="accordion-list">
                   <li>What happened</li>
-                  <li>Time</li>
                 </ul>
                 <hr className="accordion-rule" />
                 <h4>Optional information</h4>
                 <ul className="accordion-list">
+                  <li>Date and time</li>
                   <li>Officer(s) involved</li>
                 </ul>
                 <ProgressButton
@@ -69,7 +69,7 @@ class Introduction extends React.Component {
                 aria-expanded="false"
                 aria-controls="b-a2"
               >
-                By phone
+                Over the phone
               </button>
               <div
                 id="b-a2"
@@ -77,10 +77,15 @@ class Introduction extends React.Component {
                 aria-hidden="true"
               >
                 <p>
-                  Call the Office of Police Oversight at (512) 972-2676. We’d be
+                  Call the Office of Police Oversight at <a href="tel:+1-512-972-2676">(512) 972-2676</a>. We’d be
                   happy to speak with you.
                 </p>
 
+                <p>
+                  If you need an interpreter, you can call with a friend to
+                  interpret for you or ask for an interpreter. Just tell us the
+                  language you prefer.
+                </p>
                 <p>Office hours are Monday through Friday, 8 am to 5 pm.</p>
               </div>
             </li>
@@ -98,9 +103,9 @@ class Introduction extends React.Component {
                 aria-hidden="true"
               >
                 <p>
-                  You can share thanks in person at the Office of Police Oversight at 1520 Rutherford Lane, Austin, TX 78754. We are in Building 1, on the 2nd floor, Suite 211. Visitor parking is in front of the main entrance. You will need to check in with building security at the front desk.
+                  You can share thanks in person at the Office of Police Oversight at 1520 Rutherford Lane, Austin, TX 78754. We are in Building 1, on the 2nd floor, Suite 211. Visitor parking is in front of the main entrance.
                 </p>
-                <p>Office hours are Monday through Friday, 8 am to 5 pm. .</p>
+                <p>Office hours are Monday through Friday, 8 am to 5 pm.</p>
               </div>
             </li>
             <li>
@@ -130,12 +135,12 @@ class Introduction extends React.Component {
               </div>
             </li>
           </ul>
-          <h3 className="intro-about">About us</h3>
+          <h2 className="intro-about">About us</h2>
           <p>
             We are the Office of Police Oversight, impartial and separate from
             the Austin Police Department.
           </p>
-          <a href="">Learn more about who we are and what we do.</a>
+          <a href="https://alpha.austin.gov/police-oversight">Learn more about who we are and what we do.</a>
         </div>
       </div>
     );

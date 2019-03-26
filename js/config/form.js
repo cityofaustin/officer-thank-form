@@ -4,6 +4,7 @@ import Confirmation from '../components/Confirmation.jsx';
 
 import {
   whatHappenedThanksChapter,
+  whereHappenedChapter,
   officerDetailsChapter,
   aboutYouChapter,
 } from './chapters';
@@ -26,6 +27,10 @@ const formConfig = {
 
     console.log("Submitting:");
     console.log(formData.data);
+
+    // Let's store the data in case we need to re-submit later.
+    localStorage.setItem("opo_form_data", JSON.stringify(formData.data));
+    localStorage.setItem("opo_form_submiturl", formConfig.submitUrl);
 
     // Create the XHR request
     var request = new XMLHttpRequest();
@@ -70,10 +75,11 @@ const formConfig = {
   introduction: Introduction,
   confirmation: Confirmation,
   defaultDefinitions: {},
-  openAllChaptersOnReview: true,
+  openAllChaptersOnReview: false,
   hideNavArrows: true,
   chapters: {
     whatHappenedThanksChapter,
+    whereHappenedChapter,
     officerDetailsChapter,
     aboutYouChapter,
   },
