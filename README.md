@@ -7,8 +7,8 @@ Started by using the [US Forms System Starter App](https://github.com/usds/us-fo
 
 👯 Clone the repo (recommended: --recursive to also pull submodules) [more about submodules](http://www.vogella.com/tutorials/GitSubmodules/article.html)
 ```
-git clone --recursive https://github.com/cityofaustin/officer-thanks-form
-cd officer-thanks-form
+git clone --recursive https://github.com/cityofaustin/officer-thank-form
+cd officer-thank-form
 ```
 
 ### Install dependencies and run

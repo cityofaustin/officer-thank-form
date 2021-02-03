@@ -6,11 +6,11 @@ build/
 .vscode/
 
 # Build artifacts
-public/css
-public/fonts
-public/images
-public/js
-public/stats
+public/css/*
+public/fonts/*
+public/images/*
+public/js/*
+public/stats/*
 
 # Files to ignore
 ._*
